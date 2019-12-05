@@ -1,0 +1,6 @@
+framework module Pods_SpotifyWrapper {
+  umbrella header "Pods-SpotifyWrapper-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		282C4611239910840072BABC /* SpotifyWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 282C460F239910840072BABC /* SpotifyWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E01D2EA00410C8174D2362B3 /* Pods_SpotifyWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485FDD90BE779747D797AEBE /* Pods_SpotifyWrapper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		282C460C239910840072BABC /* SpotifyWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpotifyWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		282C460F239910840072BABC /* SpotifyWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifyWrapper.h; sourceTree = "<group>"; };
 		282C4610239910840072BABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		485FDD90BE779747D797AEBE /* Pods_SpotifyWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotifyWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E14E196765E7115DC95B6F1 /* Pods-SpotifyWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyWrapper.debug.xcconfig"; path = "Target Support Files/Pods-SpotifyWrapper/Pods-SpotifyWrapper.debug.xcconfig"; sourceTree = "<group>"; };
+		C0331F20916F0F5EA2A1248E /* Pods-SpotifyWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyWrapper.release.xcconfig"; path = "Target Support Files/Pods-SpotifyWrapper/Pods-SpotifyWrapper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E01D2EA00410C8174D2362B3 /* Pods_SpotifyWrapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +37,8 @@
 			children = (
 				282C460E239910840072BABC /* SpotifyWrapper */,
 				282C460D239910840072BABC /* Products */,
+				FE73838310C51B577420E176 /* Pods */,
+				60CB83CA33100813DCD37095 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +59,24 @@
 			path = SpotifyWrapper;
 			sourceTree = "<group>";
 		};
+		60CB83CA33100813DCD37095 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				485FDD90BE779747D797AEBE /* Pods_SpotifyWrapper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE73838310C51B577420E176 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E14E196765E7115DC95B6F1 /* Pods-SpotifyWrapper.debug.xcconfig */,
+				C0331F20916F0F5EA2A1248E /* Pods-SpotifyWrapper.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -70,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 282C4614239910840072BABC /* Build configuration list for PBXNativeTarget "SpotifyWrapper" */;
 			buildPhases = (
+				13A00CBC21BA25A38C4F1D6D /* [CP] Check Pods Manifest.lock */,
 				282C4607239910840072BABC /* Headers */,
 				282C4608239910840072BABC /* Sources */,
 				282C4609239910840072BABC /* Frameworks */,
@@ -125,6 +151,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13A00CBC21BA25A38C4F1D6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpotifyWrapper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		282C4608239910840072BABC /* Sources */ = {
@@ -255,6 +306,7 @@
 		};
 		282C4615239910840072BABC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E14E196765E7115DC95B6F1 /* Pods-SpotifyWrapper.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -272,12 +324,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.sgr..SpotifyWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		282C4616239910840072BABC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0331F20916F0F5EA2A1248E /* Pods-SpotifyWrapper.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -295,6 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.sgr..SpotifyWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
